@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Testing Hotel Controller</title>
+        <link rel="stylesheet" href="../../css/qunit-1.13.0.css" />
+    </head>
+    <body>
+        <div id="qunit"></div>
+        <div id="qunit-fixture"></div>
+        <script src="../../js/vendor/jquery-1.10.2.min.js"> </script>
+        <script src="../../js/vendor/qunit-1.13.0.js"> </script>
+        <script src="../../js/vendor/jquery.base64.js"> </script>
+        <script src="../../js/main.js"> </script>
+        <script src="HotelControllerTest.js"> </script>
+        
+        <script type="text/javascript">
+            jQuery(document).on("ready", function () {
+                $(document).ajaxSend(function () {
+                    stop();
+                }).ajaxComplete(function () {
+                    start();
+                });
+
+                module("Tests del Controlador Hotel");
+                TestListarHotel();
+                //TestObtenerHotel();
+                //TestObtenerClaseHotel();
+                TestObtenerPrecio();
+                //TestDisponibilidadHotel();
+            });
+        </script>
+    </body>
+</html>
